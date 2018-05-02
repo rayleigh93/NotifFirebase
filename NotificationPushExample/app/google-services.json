@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "62835966629",
+    "firebase_url": "https://testnotif-c3add.firebaseio.com",
+    "project_id": "testnotif-c3add",
+    "storage_bucket": "testnotif-c3add.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:62835966629:android:4963d7d41838081f",
+        "android_client_info": {
+          "package_name": "com.example.stagiaire040.notificationpushexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "62835966629-i9u0oru69sdmaee12nlmmnks8t2vmskt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBimG8V5ZH86WgY1Ys2fBlN_jNrbvSVsAY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
