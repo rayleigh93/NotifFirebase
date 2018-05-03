@@ -19,7 +19,7 @@
         android:background="@drawable/input_background"
         android:ems="10"
         android:hint="Email"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:textSize="18sp" />
 
     <EditText
@@ -34,7 +34,7 @@
         android:background="@drawable/input_background"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:textSize="18sp" />
 
     <Button

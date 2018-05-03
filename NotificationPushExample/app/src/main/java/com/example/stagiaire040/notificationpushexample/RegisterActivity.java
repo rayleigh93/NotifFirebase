@@ -21,6 +21,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -135,12 +136,14 @@ public class RegisterActivity extends AppCompatActivity {
 
                                 if(task.isSuccessful()){
 
+                                    final String token_id = FirebaseInstanceId.getInstance().getToken();
                                     final String user_id = mAuth.getCurrentUser().getUid();
 
 
 
                                                 Map<String,Object> userMap = new HashMap<>();
                                                 userMap.put("name",name);
+                                                userMap.put("token_id",token_id);
 
 
 

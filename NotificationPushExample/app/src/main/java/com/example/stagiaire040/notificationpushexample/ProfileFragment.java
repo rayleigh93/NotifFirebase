@@ -13,7 +13,11 @@ import android.widget.TextView;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 /**
@@ -72,8 +76,32 @@ public class ProfileFragment extends android.support.v4.app.Fragment  {
         mButtonDeco.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mAuth.signOut();
-                startActivity(new Intent(container.getContext(),LoginActivity.class));
+
+
+              //  mAuth.signOut();
+               // startActivity(new Intent(container.getContext(),LoginActivity.class));
+
+
+                Map<String,Object> tokenRemove = new HashMap<>();
+                tokenRemove.put("token_id", FieldValue.delete());
+
+
+                mFirebaseFirestore.collection("users").document(mUserId).update(tokenRemove).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+
+                        mAuth.signOut();
+                        startActivity(new Intent(container.getContext(),LoginActivity.class));
+
+                    }
+                });
+
+
+
+
+
+
+
             }
         });
 
